@@ -1,4 +1,14 @@
 .App {
+  height:100%;
+  width:100%;
   text-align: center;
-  color:white;
+}
+.header{
+  height:25%;
+}
+.main{
+  height:70%;
+}
+.footer{
+  height:5%;
 }
