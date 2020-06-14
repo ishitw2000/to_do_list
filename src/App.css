@@ -7,8 +7,19 @@
   height:25%;
 }
 .main{
-  height:70%;
+  height:65%;
 }
 .footer{
-  height:5%;
+  height:10%;
+}
+@media(max-height:550px){
+  .header{
+    height:35%;
+  }
+  .main{
+    height:55%;
+  }
+  .footer{
+    height:5%;
+  }
 }

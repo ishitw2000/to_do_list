@@ -10,7 +10,7 @@ const header = (props) =>{
         //         </h3>
         //     </div>
         // </div>
-        <div className="jumbotron jumbotron-fluid">
+        <div className="jumbotron jumbotron-fluid bg-success text-light">
             <div className="container">
                 <h1 className="display-5 lead">{props.title}</h1>
             </div>
