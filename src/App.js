@@ -127,14 +127,6 @@ class App extends PureComponent{
       <div className="App">
         <div className="header">
           <Header title="To-Do-List"/>
-          {this.state.authenticated===2 ? (
-            <div 
-              className="text-danger" 
-                style={{"textDecoration":"underline"}}>
-                  Welcome, {this.state.name}<span>  </span>
-                  <button className="btn btn-light" onClick={this.toggleSignOut}>Sign-Out</button>
-            </div>
-          ) : null}
         </div>
 
         {this.state.authenticated===0 ?
@@ -145,13 +137,21 @@ class App extends PureComponent{
         {this.state.authenticated===1 ?
          <SignUp signup={this.makeNewUser}/> : null}
 
-        <div className="main overflow-auto">
-        {this.state.authenticated===2 ? 
-          <TaskList 
-          tasks={this.state.tasks}
-          delete={this.deleteTaskHandler}/>
-        : null}
+        {this.state.authenticated===2 ? (
+            <div 
+              className="welcome text-danger" 
+              style={{"textDecoration":"underline"}}>
+                Welcome, {this.state.name}<span>  </span>
+                <button className="btn btn-light" onClick={this.toggleSignOut}>Sign-Out</button>
+            </div>
+            ) : null}
+        {this.state.authenticated===2 ? (
+          <div className="main overflow-auto">
+            <TaskList 
+            tasks={this.state.tasks}
+            delete={this.deleteTaskHandler}/>
         </div>
+        ) : null};
         <div className="footer">
           {this.state.authenticated===2 ? 
           <InputField click={this.addTaskHandler}/>

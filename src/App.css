@@ -4,10 +4,13 @@
   text-align: center;
 }
 .header{
-  height:28%;
+  height:25%;
+}
+.welcome{
+  height:6%;
 }
 .main{
-  height:65%;
+  height:60%;
 }
 .footer{
   height:7%;
