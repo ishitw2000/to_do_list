@@ -35,7 +35,7 @@ class login extends Component{
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <input 
+                        <input type="password"
                                 onChange={this.passwordChangeHandler}
                                 value={this.state.password}
                                 placeholder="Enter your password"/>
